@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import {InteractionService} from './interaction.service';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,18 @@ export class AppComponent implements AfterViewInit {
   public valueEntered: any;
   private _getSetAge: number;
   @ViewChild('nameRef') nameElementRef: ElementRef;
+
+
+  constructor(private _interactionService : InteractionService){
+
+
+  }
+    greetStudent(){
+      this._interactionService.sendMessage('morning')
+    }
+    appreciateStudent(){
+      this._interactionService.sendMessage('appreciate student good night');
+    }
 
   ngAfterViewInit(){
     this.nameElementRef.nativeElement.focus();
