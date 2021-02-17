@@ -1,3 +1,4 @@
+
 <p> I am result of property binding -- {{property}}</p>
 <hr>
 <p>the image is result of attribute binding</p>
@@ -5,23 +6,29 @@
 <hr>
 <p>below is event binding. The value of counter is inreased on each click</p>
 <strong>Counter Value: </strong> <span>{{counter}}</span>
-<button (click)="counterP()" >Counter Plus 1</button>
+<button (click)="counterP()">Counter Plus 1</button>
 
 <hr>
 <p>below is the result of twoway binding</p>
-<input type="text" [(ngModel)]="userEnteredValue" >
+<input type="text" [(ngModel)]="userEnteredValue">
 <p>two way binding output : {{userEnteredValue}}</p>
 
 <hr>
-<h5>Feakign awesom concept wjere two way binding is splitted i.e converted in attribute and event binding. And basically two way binding is merger of these two</h5>
+<h5>Feakign awesom concept wjere two way binding is splitted i.e converted in attribute and event binding. And basically
+  two way binding is merger of these two</h5>
 <input type="text" [ngModel]="valueEntered" (ngModelChange)="onTheValueCh($event)">
 <p>two way binding splitted {{valueEntered}}</p>
 
 <hr>
 <p>getter and setter</p>
-<input type="text" [(ngModel)]="getSetAge" >
+<input type="text" [(ngModel)]="getSetAge">
 <p>he says get adn setter are same ; {{getSetAge}}</p>
 
 <hr>
 <p>@view child decorator</p>
 <input type="text" #nameRef>
+
+
+<hr>
+
+<app-parent></app-parent>

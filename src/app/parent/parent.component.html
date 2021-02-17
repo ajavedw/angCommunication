@@ -1,0 +1,8 @@
+<h2>parent works!</h2>
+<div>
+  <button (click) = "loggedInGetSetVal=true">Login</button>
+  <button (click) = "loggedInGetSetVal=false">Logout</button>
+</div>
+{{loggedInGetSetVal}}
+
+<app-child [loggedIn]="loggedInVal" [lelo]="lala" [loggedInGetSet]="loggedInGetSetVal"></app-child>
